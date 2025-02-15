@@ -1,0 +1,279 @@
+/* font */
+@font-face {
+  font-family: 'SunBatang-Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Reset.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Pretendard Variable';
+  background-color: #f9f9f9;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+em {
+  font-style: normal;
+}
+button,
+input,
+textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+/* layout */
+.main_container {
+  padding: 20px;
+}
+.main_container .inner {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 750px;
+}
+/* nav_containter */
+.nav_containter {
+  display: flex;
+  padding: 0 40px;
+  justify-content: center;
+  gap: 0 20px;
+}
+.nav_containter::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #222;
+  margin-top: 16px;
+}
+
+.nav_containter > li > a {
+  display: block;
+  color: #7a7a7a;
+  font-size: 20px;
+}
+.nav_containter > li > a::after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #222;
+  transition: all 0.2s linear;
+}
+.nav_containter > li > a:hover::after {
+  width: 100%;
+}
+.nav_containter > li > a.active {
+  color: #222;
+}
+/* main_section */
+.main_section {
+  position: relative;
+}
+.main_container .main_section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+}
+.main_container h1 {
+  margin-top: 40px;
+  text-align: center;
+  font-family: 'SunBatang-Light';
+  font-size: 62px;
+  color: #222;
+  animation: fadeInDown 0.8s ease-in;
+  font-weight: 600;
+}
+.main_container h2 {
+  text-align: center;
+  font-family: 'SunBatang-Light';
+  font-size: 62px;
+  color: #222;
+  animation: fadeInDown 0.8s ease-in;
+  font-weight: 600;
+}
+/* main_video */
+.main_video_wrap .main_video {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  animation: fadeIn 1s ease-in;
+}
+.main_video_wrap .txt_wrap {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.main_video_wrap .txt_wrap > span {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 16px;
+  color: #222;
+  text-align: center;
+  font-weight: 400;
+  animation: fadeIn 1.5s ease-in;
+}
+.main_video_wrap .txt_wrap > span.st_txt {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: 'SunBatang-Light';
+  font-weight: 500;
+}
+.main_video_wrap .txt_wrap > span.st_txt::after {
+  display: block;
+  margin-top: 8px;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #222;
+}
+.main_video_wrap .txt_wrap > span > em {
+  background-color: #222;
+  color: #fff;
+}
+/* logo_round */
+.logo_round {
+  position: absolute;
+  width: 400px;
+  left: 174px;
+  top: 30px;
+  animation: rotateIn_edit 12s linear infinite;
+  opacity: 0.8;
+}
+.logo_round img {
+  width: 100%;
+}
+@keyframes rotateIn_edit {
+  0% {
+    transform: rotate(-360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+/* Gallery */
+.section_box {
+  margin-top: 10px;
+  padding: 0 40px;
+  width: 100%;
+}
+.section_box img {
+  width: 100%;
+}
+.main_container .gallery_containter {
+  display: flex;
+  margin-top: 40px;
+  padding: 0 40px 100px;
+  flex-direction: row;
+  gap: 100px 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  animation: fadeIn 1.5s ease-in;
+}
+.gallery_containter .gallery_box {
+  padding: 20px;
+  background-color: #fff;
+  width: calc(50% - 20px);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.gallery_containter .gallery_box .img_box {
+  display: flex;
+  align-items: center;
+  min-height: 470px;
+  max-height: 470px;
+  overflow: hidden;
+}
+.gallery_containter .gallery_box video {
+  display: block;
+  width: 100%;
+}
+.gallery_containter .gallery_box img {
+  display: block;
+  width: 100%;
+}
+.gallery_box .txt_box {
+  margin-top: 20px;
+}
+.gallery_box .txt_box .title_box::after {
+  display: block;
+  margin-top: 10px;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.gallery_box .txt_box .title_box .sub_title {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+.gallery_box .txt_box .title_box .title {
+  font-size: 20px;
+}
+.gallery_box .txt_box .dis_box {
+  margin-top: 10px;
+}
+/* contact */
+.main_section .sns_section {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  animation: fadeIn 1.5s ease-in;
+}
+.main_section .sns_section .logo {
+  display: inline-block;
+  width: 40px;
+}
+.main_section .sns_section .sns_box {
+  display: flex;
+  gap: 0 10px;
+  align-items: center;
+}
+.main_section .sns_section .sns_box span {
+  font-size: 20px;
+}
+.main_section .sns_section .sns_box span em {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+.main_section .sns_section .logo img {
+  width: 100%;
+}
+.main_section .intro {
+  margin: 0 auto 20px;
+  width: 500px;
+  animation: fadeIn 1.5s ease-in;
+}
+.main_section .intro em {
+  background-color: #222;
+  color: #fff;
+}
