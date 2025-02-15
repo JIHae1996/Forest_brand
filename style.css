@@ -45,12 +45,16 @@ textarea {
 }
 /* layout */
 .main_container {
+  margin: 0 auto;
+  overflow: hidden;
   padding: 20px;
+  box-sizing: border-box;
 }
 .main_container .inner {
   margin: 0 auto;
   padding: 40px 0;
   width: 750px;
+  box-sizing: border-box;
 }
 /* nav_containter */
 .nav_containter {
@@ -158,13 +162,14 @@ textarea {
 .logo_round {
   position: absolute;
   width: 400px;
-  left: 174px;
+  left: 50%;
   top: 30px;
-  animation: rotateIn_edit 12s linear infinite;
+  transform: translateX(-50%);
   opacity: 0.8;
 }
 .logo_round img {
   width: 100%;
+  animation: rotateIn_edit 12s linear infinite;
 }
 @keyframes rotateIn_edit {
   0% {
@@ -276,4 +281,73 @@ textarea {
 .main_section .intro em {
   background-color: #222;
   color: #fff;
+}
+@media (max-width: 1024px) {
+  .main_container .main_section {
+    padding-bottom: 500px;
+  }
+  .nav_containter::after {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  .nav_containter::after {
+    display: none;
+  }
+  .main_container h1 {
+    font-size: 40px;
+  }
+  .main_container h2 {
+    font-size: 40px;
+  }
+  .main_container .inner {
+    max-width: 100%;
+  }
+  .main_container .main_section {
+    padding-bottom: 50px;
+  }
+  .gallery_containter .gallery_box {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .nav_containter > li > a {
+    font-size: 16px;
+  }
+  .section_box {
+    padding: 0 20px;
+  }
+  .main_container .gallery_containter {
+    gap: 50px 0;
+    padding: 0 20px 100px;
+  }
+  .gallery_containter .gallery_box .img_box {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .gallery_box .txt_box .title_box .sub_title {
+    font-size: 12px;
+  }
+  .gallery_box .txt_box .title_box .title {
+    font-size: 16px;
+  }
+  .gallery_box .txt_box .dis_box {
+    font-size: 14px;
+  }
+  .main_section .sns_section {
+    width: 80%;
+  }
+  .main_section .intro {
+    width: 80%;
+    font-size: 14px;
+  }
+  .main_section .sns_section .logo {
+    width: 20px;
+  }
+  .main_section .sns_section .sns_box span {
+    font-size: 14px;
+  }
+  .main_section .sns_section .sns_box span em {
+    font-size: 12px;
+  }
 }
