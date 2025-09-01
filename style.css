@@ -21,6 +21,7 @@ body {
   line-height: 1.5;
   font-family: 'Pretendard Variable';
   background-color: #f9f9f9;
+  word-break: keep-all;
 }
 
 ul,
@@ -155,6 +156,7 @@ textarea {
   background-color: #222;
 }
 .main_video_wrap .txt_wrap > span > em {
+  padding: 0 5px;
   background-color: #222;
   color: #fff;
 }
@@ -259,9 +261,29 @@ textarea {
   width: 40px;
 }
 .main_section .sns_section .sns_box {
+  margin: 0 auto;
+  padding-bottom: 20px;
   display: flex;
+  width: 80%;
   gap: 0 10px;
+  flex-direction: column;
   align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.main_section .sns_section .sns_box:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.main_section .sns_section .sns_box > a {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #7a7a7a;
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+.main_section .sns_section .sns_box > a:hover {
+  color: #000;
 }
 .main_section .sns_section .sns_box span {
   font-size: 20px;
@@ -279,6 +301,7 @@ textarea {
   animation: fadeIn 1.5s ease-in;
 }
 .main_section .intro em {
+  padding: 0 5px;
   background-color: #222;
   color: #fff;
 }
